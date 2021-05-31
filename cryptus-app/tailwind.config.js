@@ -48,7 +48,10 @@ module.exports = {
         DEFAULT: "#F4F4DB",
       },
       dirt: {
-        DEFAULT: "#4D2100",
+        DEFAULT: "#888375",
+      },
+      coquille: {
+        DEFAULT: "#FFFDF5",
       },
     },
   },

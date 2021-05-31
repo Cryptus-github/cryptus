@@ -10,9 +10,9 @@ export default function Home() {
   const [session, loading] = useSession();
 
   return (
-    <div className="bg-white">
+    <div className="bg-coquille">
       <Head>
-        <title>CryptoFlowers</title>
+        <title>Public Wallet</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -33,7 +33,7 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <Navbar />
+
       <main className="">
         {!session && (
           <>
@@ -43,8 +43,8 @@ export default function Home() {
         {session && (
           <>
             <div> Logged In </div>
-            <a className="rounded bg-blue-500" href="/reader">
-              Go to reader
+            <a className="rounded bg-blue-500" href="/showroom">
+              Go to showroom
             </a>
           </>
         )}

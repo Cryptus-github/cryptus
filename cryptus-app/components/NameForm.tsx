@@ -10,7 +10,8 @@ import React from "react";
 // }
 
 function validateEmail(email) {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
 
@@ -42,8 +43,7 @@ export default class NameForm extends React.Component {
       createLeadRequest(field1, field2);
 
       $.ajax({
-        url:
-          "https://www.docs.google.com/forms/d/1qJ8yOg670AI2dsUweVNgeSpyVcBIdoOYdN14VpRt8ko/formResponse?",
+        url: "https://www.docs.google.com/forms/d/1qJ8yOg670AI2dsUweVNgeSpyVcBIdoOYdN14VpRt8ko/formResponse?",
         data: {
           "entry.217945379": field1,
           "entry.1812034651": field2,
@@ -82,7 +82,7 @@ export default class NameForm extends React.Component {
                 </span> */}
               <input
                 type="email"
-                className="email w-full text-center bg-olive lg:text-left rounded-t-xl lg:rounded-r-none lg:rounded-l-xl px-2 py-2"
+                className="email w-full text-center bg-white lg:text-left rounded-t-xl lg:rounded-r-none lg:rounded-l-xl px-2 py-2"
                 name="entry.217945379"
                 id="email"
                 placeholder="Email"
@@ -90,7 +90,7 @@ export default class NameForm extends React.Component {
               />
               <button
                 type="button"
-                className="submit md:px-4 2xl:text-xl text-center whitespace-nowrap bg-leaf text-white font-bold rounded-b-xl lg:rounded-l-none lg:rounded-r-xl w-full lg:w-2/5 px-2 py-2"
+                className="submit md:px-4 2xl:text-xl text-center whitespace-nowrap bg-dirt text-white font-bold rounded-b-xl lg:rounded-l-none lg:rounded-r-xl w-full lg:w-2/5 px-2 py-2"
                 onClick={this.postToGoogle}
               >
                 Get Early Access
